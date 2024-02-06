@@ -1,0 +1,5 @@
+Comando para compilar um programa manualmente
+
+csc <nomedoarquivo>
+
+ele transforma o arquivo desejado em um executável

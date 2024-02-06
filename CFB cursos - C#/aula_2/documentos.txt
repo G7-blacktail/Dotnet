@@ -1,0 +1,7 @@
+comando para criar um novo projeto via terminal
+
+dotnet new console
+
+este é o padrão .NET
+
+posso copilar com csc ou posso rodar simplismente sem buildar usando dotnet run
