@@ -5,3 +5,13 @@ dotnet new console
 este é o padrão .NET
 
 posso copilar com csc ou posso rodar simplismente sem buildar usando dotnet run
+
+Obs.: podemos passar parametros para o array de argumentos do metodo de entrada (Main)
+
+```
+PS C:\Users\gustavo.fernandes\Documents\Gustavo\Curso Programação Completo C#\Dotnet\CFB cursos - C#\aula_2> ./Program b
+Hello, World!
+b
+```
+
+Passei o parametro "b"
