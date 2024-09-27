@@ -8,4 +8,25 @@ Comando para compilar um programa manualmente
 
 csc <nomedoarquivo>
 
+"csc aula01.cs"
+Comando para mostrar o que tem na pasta : "DIR"
 ele transforma o arquivo desejado em um executável
+
+como executar o programa: apenas digitar o nome do executabel = aula01
+Porém me deparei com o seguinte erro:
+
+´´´
+PS C:\Users\gustavo.fernandes\Documents\Gustavo\Curso Programação Completo C#\Dotnet\CFB cursos - C#\aula_1> Aula01
+Aula01 : O termo 'Aula01' não é reconhecido como nome de cmdlet, função, arquivo de script ou programa operável. Verifique a grafia do nome ou, se um caminho tiver sido incluído, veja se o caminho 
+está correto e tente novamente.
+No linha:1 caractere:1
++ Aula01
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Aula01:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+Suggestion [3,General]: O comando Aula01 não foi encontrado, mas existe no local atual. Por padrão, o Windows PowerShell não carrega comandos do local atual. Se você confia nesse comando, digite: ".\Aula01". Consulte "get-help about_Command_Precedence" para obter mais detalhes.
+´´´
+
+Sugerindo que rodasse o comando como .\Aula01, e ao executar a sugestão funcionou corretamente. Obs.: Lembrar de não escrever com aspas pois isto paenas retornará o nome do arquivo no console.
