@@ -1,0 +1,7 @@
+Agora irei estudar sobre escopo das váriavies
+
+RELEMBRAR E APROFUNDAR 
+
+static
+váriavies LOCAIS e GLOBAIS
+

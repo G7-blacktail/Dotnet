@@ -16,6 +16,15 @@ using System;
             byte b = 10; // 0 ~ 255
             var aux = nome;
 
-            Console.WriteLine(aux);
+            // declarando várias variáveis ao mesmo tempo (é necessário que todas sejam do mesmo tipo)
+            int num1, num2, res;
+
+            num1= 10;
+            num2 = 2;
+            res= num1 * num2;
+
+
+            Console.WriteLine("Nome do usário: " + aux + " !");
+            Console.WriteLine("A multiplicação de " + num1 + " com " + num2 + " é igual a: " + res);
         }
     }
