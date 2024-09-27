@@ -1,0 +1,252 @@
+Esta aula é referente a operadores
+
+Achei este artigo interessante da DEVMEDIA que resume bem o que é proposto nesta aula
+```
+Tipos de Operadores do C#
+Neste artigo veremos os conceitos e exemplos com os Operadores da linguagem C#
+Artigos
+.NET
+Tipos de Operadores do C#
+Neste artigo veremos os conceitos e exemplos com os Operadores da linguagem C#. Começaremos com os operadores de atribuição, aritméticos e aritméticos de atribuição reduzida.
+
+Os operadores indicam o tipo de operação que será executada, gerando assim novos valores a partir de um ou mais operandos (itens à direita ou à esquerda do operador). Geralmente, o resultado é do tipo booleano (boolean) ou numérico (int, decimal, double). É importante sabermos como usá-los e é isso que vamos aprender a partir de agora.
+
+Operador de Atribuição
+O símbolo igual (=) representa a atribuição de um valor à uma variável, onde ela e o valor atribuído devem obrigatoriamente ser de tipos compatíveis, ou seja, uma variável do tipo int por exemplo não pode receber um valor do tipo string (a menos que usemos as conversões, mas vamos deixar isso mais para frente).
+
+Veja a sintaxe: variável = atribuição;
+
+A Listagem 1 deixa tudo mais claro (feito dentro do método Main, em uma Console Application).
+
+//variável idade recebe o valor 21
+int idade = 21;
+
+//declaro variável maiorIdade como boolean
+bool maiorIdade;
+
+//exibe ambos em tela, atribuindo valor ao booleano
+Console.WriteLine("\n" + idade + "\n");
+Console.WriteLine(maiorIdade = true);
+
+Console.ReadKey();
+Listagem 1. Operadores de Atribuição
+O resultado do código acima é o seguinte:
+
+resultado
+Podemos também atribuir uma variável primitiva a outra variável primitiva. Veja no exemplo da Listagem 2.
+
+int a = 10;
+int b = a;
+Listagem 2. Atribuição de variáveis
+Assim, temos duas situações: primeiro a recebe o valor 10, depois b recebe a variável a. Portanto, podemos dizer que a variável b contém o valor 10.
+
+Os conceitos acima são de Tipos por Valor e por Referência.
+
+Operadores Aritméticos
+Os operadores aritméticos descritos na Tabela 1 são os mesmos usados em cálculos matemáticos.
+
+Operador Aritmético	Descrição
++	Adição
+-	Subtração
+*	Multiplicação
+/	Divisão
+%	Módulo (resto da divisão)
+Tabela 1. Operadores aritméticos
+Veja na Listagem 3 o exemplo com o uso dos cinco operadores da tabela.
+
+int a = 5, b = 10, c = 15, d = 20; // declaramos quatro variáveis do tipo int
+Console.WriteLine(a + d); // operação de soma
+Console.WriteLine(c - a); // operação de subtração
+Console.WriteLine(b * c); // operação de multiplicação
+Console.WriteLine(d / b); // operação de divisão
+Console.WriteLine(c % b); // operação de módulo (resto de divisão)
+Console.ReadKey();
+Listagem 3. Operadores aritméticos
+No código acima realizamos as operações aritméticas:
+
+soma dos valores das variáveis a e d (a + d)
+subtraímos o valor da variável a do valor da variável c (c - a)
+multiplicamos o valor da variável b pelo valor da variável c (b * c)
+dividimos o valor da variável d pelo valor da variável b (d / b)
+obtemos o resto da divisão do valor da variável c pelo valor da variável b (c % b)
+e em cada operação temos como resultado um valor inteiro que será exibido no prompt de comando.
+
+O resultado do código acima é o seguinte:
+
+resultado
+Ordem de operações matemáticas
+Em uma expressão matemática existe uma ordem para executar as operações. A linguagem C# respeita esta ordem em que as operações de multiplicação e divisão serão executadas antes de operações de soma e subtração. A ordem pode ser forçada pelo uso de parênteses. Por exemplo, se colocarmos uma soma entre parênteses ela será executada antes de uma multiplicação em uma mesma expressão. Veja dois exemplos na Listagem 4.
+
+int a = 5, b = 10, c = 15, d = 20;
+Console.WriteLine(a + b * c); // a operação de multiplicação será executada primeiro
+Console.WriteLine((a + b) * c); // a operação de soma será executada primeiro porque está entre parênteses
+Console.ReadKey();
+Listagem 4. Ordem de operações matemáticas
+No código acima temos as operações:
+
+multiplicamos o valor da variável b pelo valor da variável c e somamos com o valor da variável a (a + b * c)
+somamos o valor da variável a com o valor da variável b, que está entre parênteses, e multiplicamos pela variável c ((a +b) * c)
+a primeira operação segue a ordem de precedência e a segunda operação força a ordem com parênteses.
+
+Operadores Aritméticos de Atribuição Reduzida
+Esses operadores são usados para compor uma operação aritmética e uma atribuição, conforme é descrito na Tabela 2.
+
+Operador Aritmético	Descrição
++ =	mais igual
+- =	menos igual
+* =	vezes igual
+/ =	dividido igual
+% =	módulo igual
+Tabela 2. Operadores Aritméticos de Atribuição Reduzida
+Na Listagem 5 é acrescentado o valor 10 a variável x.
+
+int x = 5;
+x += 5; // é a mesma coisa que x = x + 5
+Console.WriteLine("Valor do x = " + x);
+Console.ReadKey();;
+Listagem 5. Exemplo de Operadores Aritméticos de Atribuição Reduzida
+O resultado do código acima é o seguinte:
+
+resultado
+Devemos usar operadores de atribuição desta forma, como boa prática, já que é implementado de uma forma mais eficiente pelo compilador, e ainda temos a economia de código.
+
+Operadores incrementais e decrementais
+Os operadores incrementais e decrementais têm a função de aumentar ou diminuir exatamente em 1 o valor de uma variável. Eles podem ser pré ou pós incremental e pré ou pós decremental. Veja os conceitos de cada um deles e um exemplo prático a seguir:
+
+Incremental (++):
+Pré incremental ou prefixo – Significa que, se o sinal for colocado antes da variável, primeiramente será somado o valor 1 para esta variável, continuando em seguida a resolução da expressão.
+Pós incremental ou sufixo – Significa que, se o sinal for colocado após a variável, é resolvido primeiro a expressão, seja ela adição, subtração, multiplicação ou qualquer outra, para em seguida ser adicionado o valor 1 à variável.
+Decremental (--)
+Pré incremental ou prefixo – Significa que, se o sinal for colocado antes da variável, primeiramente será subtraído o valor 1 para esta variável, continuando em seguida a resolução da expressão.
+Pós incremental ou sufixo – Significa que, se o sinal for colocado após a variável, é resolvido primeiro a expressão, seja ela adição, subtração, multiplicação ou qualquer outra, para em seguida ser subtraído o valor 1 à variável.
+Como prometido, veja o exemplo na LIstagem 6.
+
+Console.WriteLine("Pré-Incremento:\n");
+
+int x = 0;
+Console.WriteLine("x = " + x);
+
+Console.WriteLine("\n++x +20 = \n");
+Console.WriteLine(++x +20 + "\n");
+
+Console.WriteLine("\nPós-Incremento:\n");
+x = 0;
+
+Console.WriteLine("\nx++ +20 = \n");
+Console.WriteLine(x++ + 20 + "\n");
+
+Console.WriteLine("\nPré-Decremento:\n");
+x = 0;
+
+Console.WriteLine("x = " + x);
+
+Console.WriteLine("\n--x +20 = \n");
+Console.WriteLine(--x + 20 + "\n");
+
+Console.WriteLine("\nPós-Decremento:\n");
+x = 0;
+
+Console.WriteLine("\nx-- +20 = \n");
+Console.WriteLine(x-- + 20 + "\n");
+
+Console.ReadKey();
+Listagem 6. Exemplo de pré-incremento
+Após a compilação, esse será o resultado:
+
+resultado
+Dica: use o Breakpoint no código acima, assim você pode ver passo-a-passo todo o processo de incremento e decremento da variável x.
+Operadores Relacionais
+Os operadores relacionais comparam dois valores e retornam um valor booleano (true ou false). Veja na Tabela 3 esses operadores.
+
+Operador Relacional	Descrição
+==	Igual a
+!=	Diferente de
+>	Maior que
+<	Menor que
+>=	Maior do que ou igual a
+<=	Menor do que ou igual a
+Tabela 3. Operadores relacionais
+O exemplo da Listagem 7 ajuda a ilustrar o uso destes operadores.
+
+int a = 10, b = 25, c = 50, d = 100; // declaramos quatro variáveis de tipo int
+
+Console.WriteLine(a == d); // avaliamos a igualdade entre a e d
+Console.WriteLine(b != c);  // avaliamos a desigualdade entre b e c
+Console.WriteLine(a > b); // avaliamos se a é maior que b
+Console.WriteLine(c < d);  // avaliamos se c é menor que d
+Console.WriteLine(c >= a); // avaliamos se c é maior ou igual que a
+Console.WriteLine(d <= b); // avaliamos se d é menor ou igual que b
+
+Console.ReadKey();
+Listagem 7. Exemplo de operadores relacionais
+No código acima fazemos as seguintes avaliações:
+
+se a variável a é igual a variável d (a == d)
+se a variável b é diferente da variável c (b != c)
+se a variável a é maior que a variável b (a > b)
+se a variável c é menor que a variável d (c < d)
+se a variável c é maior ou igual que a variável a (c >= a)
+se a variável d é menor ou igual que a variável b (d <= b)
+e a cada avaliação teremos um resultado do tipo lógico true ou false que será exibido no prompt de comando.
+
+Após compilarmos o código acima, o resultado é esse:
+
+resultado
+Operadores Lógicos
+Os operadores lógicos trabalham como operandos booleanos e seu resultado também será booleano (true ou false). Eles são usados somente em expressões lógicas, e são descritos na Tabela 4.
+
+Operador Lógico	Descrição
+&&	AND = E
+||	OR = Ou
+!	NOT = Não
+Tabela 4. Operadores lógioos
+Assim, em um teste lógico usando o operador && (AND), o resultado somente será verdadeiro (true) se todas as expressões lógicas forem avaliadas como verdadeiras.
+
+Já, se o operador usado for o || (OR), basta que apenas uma das expressões lógicas seja verdadeira para que o resultado também seja verdadeiro.
+
+Completando, o operador lógico ! (NOT) é usado para gerar uma negação. Desta forma, é invertida toda a lógica da expressão.
+
+Veja o exemplo na Listagem 8 e o resultado em seguida.
+
+int a = 5, b = 10, c = 15, d = 20; // declaramos quatro variáveis do tipo int
+
+Console.WriteLine(a == 5 && d == 10); // avaliamos se a é igual a 5 e se d é igual a 10
+Console.WriteLine(c < b || d == 20); // avaliamos se c é menor que b ou se d é igual a 20
+Console.WriteLine(! (b > a)); // negamos que b é maior que a
+
+Console.ReadKey();
+Listagem 8. Exemplo de operadores lógicos
+No código acima fazemos as avaliações:
+
+se a variável a é igual a 5 E se a variável d é igual a 10 (a ==5 && d == 10)
+se a variável c é menor que a variável b OU se a variável d é igual a 20 (c < b || d == 20)
+nega o resultado da avaliação se a variável b é maior que a variável a (! (b>a))
+e a cada avaliação o resultado será do tipo lógico, true ou false que será exibido no prompt de comando.
+
+O resultado pode ser visto a seguir:
+
+resultado
+Operadores Ternários
+O operador ternário é composto por três operandos separados pelos sinais ? e : e tem o objetivo de atribuir o valor a uma variável de acordo com o resultado de um teste lógico. A sintaxe dele é: teste lógico ? valor se verdadeiro : valor se falso;
+
+Onde:
+
+teste lógico é qualquer valor ou expressão, que pode ser verdadeiro ou falso.
+valor se verdadeiro é atribuído ao valor true;
+valor se falso é atribuído ao valor false.
+Finalizando, veja o exemplo na Listagem 9 e o resultado em seguida.
+
+int x = 5, y = 10; // declaradas duas variáveis de tipo int
+
+Console.WriteLine(x < y ? "sim" : "não"); // expressão x < y é avaliada
+// se for verdadeira exibe "sim"
+// se não for verdadeira exibe "não"
+Console.ReadKey();
+Listagem 9. Exemplo de operadores ternários
+No código acima avaliamos se o valor da variável x é menor do que o valor da variável y (x < y) e se for menor será exibido o texto "sim" e se não for menor será exibido o texto "não".
+
+O resultado é apresentado a seguir:
+
+resultado
+Espero que tenha aproveitado o conteúdo. Bons códigos!
+```
