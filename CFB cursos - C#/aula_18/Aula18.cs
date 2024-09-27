@@ -34,7 +34,7 @@ class Aula18 {
         //  // Outra forma
          int[,] numeros = new int[2,2] {{55, 110},{220, 440}};
 
-         Console.WriteLine(numeros[2,2]);
+         Console.WriteLine(numeros[1,1]);
 
         // // outra forma
         //  int[] contas = {45, 37, 90, 85};
