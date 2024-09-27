@@ -1,3 +1,9 @@
+Comando para criar uma variavél de ambiente para o boot em execução:
+
+PATH %path%;C:\Windows\Microsoft.NET\Framework64\v4.0.30319
+
+este endereço está apontando para a pasta onde estão os executáveis como o csc, que é o compilador C#, atualmente apenas a versão C# 5 é suportada.
+
 Comando para compilar um programa manualmente
 
 csc <nomedoarquivo>
